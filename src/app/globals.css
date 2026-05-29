@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+  --sage-green: #7D9E7E;
+  --forest-deep: #2D4A3E;
+  --off-white: #F5F0E8;
+  --warm-cloud: #EDE8DF;
+  --sunrise-amber: #E8A87C;
+  --glacier-blue: #A8C5DA;
+  --dusk-violet: #8B7BA8;
+  --mist-gray: #B8C4BB;
+  --charcoal: #2C2C2C;
+  
+  --font-display: 'Cormorant Garamond', serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-accent: 'Space Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--off-white);
+  color: var(--charcoal);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--forest-deep);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.mono-label {
+  font-family: var(--font-accent);
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Glassmorphism Navigation */
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.nav-bar.scrolled {
+  background: rgba(245, 240, 232, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(45, 74, 62, 0.1);
+  padding: 1rem 2rem;
+}
+
+.nav-brand {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--forest-deep);
+  letter-spacing: -0.5px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--sage-green);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--forest-deep);
+  color: var(--off-white);
+}
+
+.btn-primary:hover {
+  background-color: var(--sage-green);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid var(--forest-deep);
+  color: var(--forest-deep);
+}
+
+.btn-outline:hover {
+  background-color: var(--forest-deep);
+  color: var(--off-white);
+}
+
+/* Animations */
+.tilt-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tilt-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* Badges */
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: var(--font-accent);
+}
+.badge-green { background-color: var(--sage-green); color: white; }
+.badge-amber { background-color: var(--sunrise-amber); color: white; }
+.badge-red { background-color: #d9534f; color: white; }
